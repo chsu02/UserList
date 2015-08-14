@@ -17,79 +17,56 @@ public class User implements Serializable {
 	@Column(unique = true, nullable = false)
 	private int id;
 
+	private String userId;
+
 	@Column(length = 30)
 	private String contactNo;
-
+	@Column(length = 30)
+	private String phoneno_home;
+	@Column(length = 30)
+	private String phoneno_work;
+	@Column(length = 30)
+	private String phoneno_cell;
 	@Column(length = 30)
 	private String email;
-
 	@Column(length = 50)
 	private String firstname;
-
+	private String lastname;
 	@Lob
 	private byte[] photo;
 
-	private String lastname;
 
-	private String userId;
+	// Constructor
+	public User() {}
 
-	public User() {
-	}
+	// Getter and Setter
+	public int getId() {return this.id;}
+	public void setId(int studentId) {this.id = studentId;}
 
-	public int getId() {
-		return this.id;
-	}
+	public String getUserId() {return userId;}
+	public void setUserId(String param) {this.userId = param;}
 
-	public void setId(int studentId) {
-		this.id = studentId;
-	}
+	public String getContactNo() {return this.contactNo;}
+	public void setContactNo(String contactNo) {this.contactNo = contactNo;}
 
-	public String getContactNo() {
-		return this.contactNo;
-	}
+	public String getPhoneno_home() {return phoneno_home;}
+	public void setPhoneno_home(String phoneno_home) {this.phoneno_home = phoneno_home;}
 
-	public void setContactNo(String contactNo) {
-		this.contactNo = contactNo;
-	}
+	public String getPhoneno_work() {return phoneno_work;}
+	public void setPhoneno_work(String phoneno_work) {this.phoneno_work = phoneno_work;}
 
-	public String getEmail() {
-		return this.email;
-	}
+	public String getPhoneno_cell() {return phoneno_cell;}
+	public void setPhoneno_cell(String phoneno_cell) {this.phoneno_cell = phoneno_cell;}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	public String getEmail() {return this.email;}
+	public void setEmail(String email) {this.email = email;}
 
-	public String getFirstname() {
-		return this.firstname;
-	}
+	public String getFirstname() {return this.firstname;}
+	public void setFirstname(String firstname) {this.firstname = firstname;}
 
-	public void setFirstname(String name) {
-		this.firstname = name;
-	}
+	public String getLastname() {return lastname;}
+	public void setLastname(String lastname) {this.lastname = lastname;}
 
-	public byte[] getPhoto() {
-		return this.photo;
-	}
-
-	public void setPhoto(byte[] photo) {
-		this.photo = photo;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String param) {
-		this.lastname = param;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String param) {
-		this.userId = param;
-	}
-
+	public byte[] getPhoto() {return this.photo;}
+	public void setPhoto(byte[] photo) {this.photo = photo;}
 }
