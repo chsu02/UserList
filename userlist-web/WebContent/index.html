@@ -10,9 +10,10 @@
 		<a href="/userlist-web/userlist.svc/Users?$format=json">List All Users (JSON)</a><br>
 		<form action="/userlist-web/userlist.svc/Users?$select=Firstname&$filter=Firstname%20eq%20%27Alex%27&$format=json">
 			<label>Search by First Name</label>
-			<input name='$filter' value="Alex">
+			<input type='hidden' name='$select' value='Firstname'>
+			<input name='$filter' value="Firstname eq 'Alex'">
 			<button>Search</button>
 		</form>
-		<a href="/userlist-web/userlist.svc/Users?$select=Firstname&$filter=Firstname%20eq%20%27Alex%27&$format=json"></a>
+		<a href="/userlist-web/userlist.svc/Users?$select=Firstname&$filter=Firstname%20eq%20%27Alex%27&$format=json">Search by First Name 'Alex' </a>
 	</body>
 </html>
