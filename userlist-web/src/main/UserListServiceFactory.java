@@ -2,9 +2,9 @@ package main;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import org.apache.olingo.odata2.processor.api.jpa.ODataJPAContext;
-import org.apache.olingo.odata2.processor.api.jpa.ODataJPAServiceFactory;
-import org.apache.olingo.odata2.processor.api.jpa.exception.ODataJPARuntimeException;
+import org.apache.olingo.odata2.jpa.processor.api.ODataJPAContext;
+import org.apache.olingo.odata2.jpa.processor.api.ODataJPAServiceFactory;
+import org.apache.olingo.odata2.jpa.processor.api.exception.ODataJPARuntimeException;
 
 public class UserListServiceFactory extends ODataJPAServiceFactory {
 	private static final String PERSISTENCE_UNIT_NAME = "userlist-web";
